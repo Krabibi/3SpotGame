@@ -20,6 +20,7 @@ public class Board {
         this.Board = new String[length][height];
     }
 
+    /*Placement des pions*/
     public void initBoard() {
         this.Board[0][0] = " ";
         this.Board[0][2] = " ";
@@ -58,19 +59,7 @@ public class Board {
         for(int j = 0 ; j < 3; ++j) {
             sb.append("*");
             sb.append("   ");
-            if(Board[j][0].equals("R")){
-                sb.append("R");
-            }
-            else if(Board[j][0].equals("W")){
-                sb.append("W");
-            }
-            else if(Board[j][0].equals("B")){
-                sb.append(Board[j][0]);
-            }else if (Board[j][0].equals("O")){
-                sb.append("O");
-            }else
-                sb.append(" ");
-
+            sb.append(Board[j][0]);
             sb.append("   ");
 
         }
@@ -102,22 +91,11 @@ public class Board {
         for(int j = 0 ; j < 3; ++j) {
             sb.append("*");
             sb.append("   ");
-            if(Board[j][1].equals("R")){
-                sb.append("R");
-            }
-            else if(Board[j][1].equals("W")){
-                sb.append("W");
-            }
-            else if(Board[j][1].equals("B")){
-                sb.append("B");
-            }else if (Board[j][1].equals("O")){
-                sb.append("O");
-            }else
-                sb.append(" ");
-
+            sb.append(Board[j][1]);
             sb.append("   ");
 
         }
+
         sb.append("*");
         sb.append("\n");
         for(int k = 0 ; k < 4; ++k) {
@@ -144,22 +122,10 @@ public class Board {
             }
         }
         sb.append("\n");
-        for(int j = 0 ; j <= 2; ++j) {
+        for(int j = 0 ; j < 3; ++j) {
             sb.append("*");
             sb.append("   ");
-            if(Board[j][2].equals("R")){
-                sb.append("R");
-            }
-            else if(Board[j][2].equals("W")){
-                sb.append("W");
-            }
-            else if(Board[j][2].equals("B")){
-                sb.append("B");
-            }else if (Board[j][2].equals("O")){
-                sb.append("O");
-            }else
-                sb.append(" ");
-
+            sb.append(Board[j][2]);
             sb.append("   ");
 
         }
@@ -176,14 +142,6 @@ public class Board {
             sb.append("*");
             sb.append(" ");
         }
-
-
-
-
-
-
-
-
         return sb.toString();
     }
 
